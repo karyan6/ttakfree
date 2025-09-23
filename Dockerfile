@@ -1,14 +1,10 @@
 FROM teddysun/v2ray:latest
 
-# Expose the correct container port (8080)
+# Expose port
 EXPOSE 8080
 
-# Copy the VLESS config into the container
+# Copy config
 COPY config.json /etc/v2ray/config.json
 
-# Run V2Ray with the config file
+# Run V2Ray
 CMD ["v2ray", "run", "-config", "/etc/v2ray/config.json"]
-
-
-# join telegram https://t.me/ragnarservers  for new updates 
-# my telegram username is @Not_Ragnar
